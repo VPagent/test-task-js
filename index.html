@@ -7,7 +7,18 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="root"><p>ROOT</p></div>
+    <div
+      id="root"
+      style="
+        width: 100vw;
+        height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+      "
+    >
+      <p>ROOT</p>
+    </div>
   </body>
   <script>
     const divData = [
@@ -52,7 +63,14 @@
     const addMarkup = (array) => {
       const markup = array
         .map((item) => {
-          return `<div class="block" id=${item.id}><p id=${item.id}> I am div ${item.name}</p></div>`;
+          return `<div class="block" id=${item.id} style="width: 300px;
+  height: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid black;"><p id=${item.id}> I am div ${item.name}</p></div>`;
         })
         .join("");
 
